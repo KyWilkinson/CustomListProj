@@ -43,16 +43,27 @@ namespace CustomListProject
 
         public void Add(T item)
         {
-            if(_count == _capacity)
+            if (_count == _capacity)
             {
-                _items = new T[_capacity * 2];
-            }
-            else
-            {
-                _items[_count] = item;
-                _count++;
+                T[] temporaryArray = new T[_capacity * 2];
+                for (int i = 0; i < _count; i++)
+                {
+                    temporaryArray[i] = _items[i];
 
+                }
+                _items = new T[i];
             }
+
+
+            _items[_count] = item;
+            _count++;
+
+
+
+        }
+
+        public void Remove(T item)
+        {
 
         }
     }
