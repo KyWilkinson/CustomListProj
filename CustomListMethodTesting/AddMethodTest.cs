@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace CustomListMethodTesting
 {
     [TestClass]
-    public class UnitTest1
+    public class AddMethodTest
     {
         [TestMethod]
         public void Add_TwoValues_CountOf2()
