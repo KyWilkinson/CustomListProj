@@ -71,6 +71,65 @@ namespace CustomListMethodTesting
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Add_FourValues_CountOf10()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 2;
+            int value2 = 4;
+            int value3 = 15;
+            int value4 = 100;
+            int expected = 10;
+            int actual;
+
+            //Act
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.Add(value4);
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.Add(value4);
+            customList.Add(value1);
+            customList.Add(value2);
+            actual = customList.Count;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Add_TwoValues_CountOf15()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 2;
+            int value2 = 6;
+            int expected = 15;
+            int actual;
+
+            //Act
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value1);
+
+            actual = customList.Count;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
