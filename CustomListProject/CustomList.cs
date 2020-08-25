@@ -51,7 +51,7 @@ namespace CustomListProject
                     temporaryArray[i] = _items[i];
 
                 }
-                _items = new T[i];
+                _items = temporaryArray;
             }
 
 
