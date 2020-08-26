@@ -45,7 +45,8 @@ namespace CustomListProject
         {
             if (_count == _capacity)
             {
-                T[] temporaryArray = new T[_capacity * 2];
+                _capacity *= 2;
+                T[] temporaryArray = new T[_capacity];
                 for (int i = 0; i < _count; i++)
                 {
                     temporaryArray[i] = _items[i];
@@ -61,10 +62,12 @@ namespace CustomListProject
 
 
         }
-
+        //Additional remove tests: what happens if you remove a value not in the list? What about a value in the list more than once?
         public void Remove(T item)
         {
-
+            //loop through entire array
+            //conditional statement inside loop
+            //if this is the item, what will we do? If this is not the item, what will we do?
         }
     }
 }
