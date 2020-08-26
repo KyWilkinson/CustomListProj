@@ -66,8 +66,12 @@ namespace CustomListProject
         public void Remove(T item)
         {
             //loop through entire array
+            for (int i = 0; i < _count; i--)
+            {
             //conditional statement inside loop
             //if this is the item, what will we do? If this is not the item, what will we do?
+
+            }
         }
     }
 }
