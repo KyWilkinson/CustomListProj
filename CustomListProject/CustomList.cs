@@ -128,7 +128,7 @@ namespace CustomListProject
         }
         public override string ToString()
         {
-            
+            return " _count";
         }
     }
 }
