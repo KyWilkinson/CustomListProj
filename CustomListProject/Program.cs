@@ -21,7 +21,6 @@ namespace CustomListProject
             customList.Add(value3);
             customList.Add(value4);
             customList.Remove(value3);
-            Console.WriteLine(customList);
             Console.ReadLine();
             
         }

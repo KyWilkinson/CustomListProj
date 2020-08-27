@@ -87,6 +87,7 @@ namespace CustomListProject
             }
 
             _items = temporaryArray;
+            _count--;
         }
 
         
