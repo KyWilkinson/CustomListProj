@@ -19,7 +19,7 @@ namespace CustomListProject
             customList.Add(value1);
             customList.Add(value2);
             customList.Add(value3);
-            customList.Add(value4);
+            customList.Add(value3);
             customList.Remove(value3);
             Console.ReadLine();
             

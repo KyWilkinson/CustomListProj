@@ -129,24 +129,44 @@ namespace CustomListMethodTesting
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //[TestMethod]
+        //public void Display_Array_Index()
+        //{
+        //    //Arrange
+        //    CustomList<int> customList = new CustomList<int>();
+        //    int value1 = 2;
+        //    int value2 = 4;
+        //    int value3 = 6;
+        //    int value4 = 8;
+        //    customList.Add(value1);
+        //    customList.Add(value2);
+        //    customList.Add(value3);
+        //    customList.Add(value4);
+        //    int expected = 8;
+        //    int actual;
+        //    //Act
+        //    customList.Remove(value3);
+        //    actual = customList[2];
+        //    //Assert
+        //    Assert.AreEqual(expected, actual);
+        //}
         [TestMethod]
-        public void Display_Array_Index()
+        public void Remove_OneValue_OfMultipleEqualValue()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
             int value1 = 2;
             int value2 = 4;
-            int value3 = 6;
-            int value4 = 8;
+            int expected = 3;
+            int actual;
             customList.Add(value1);
             customList.Add(value2);
-            customList.Add(value3);
-            customList.Add(value4);
-            int expected = 8;
-            int actual;
+            customList.Add(value1);
+            customList.Add(value2);
+
             //Act
-            customList.Remove(value3);
-            actual = customList[2];
+            customList.Remove(2);
+            actual = customList.Count;
             //Assert
             Assert.AreEqual(expected, actual);
         }

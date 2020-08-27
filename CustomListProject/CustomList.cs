@@ -72,24 +72,32 @@ namespace CustomListProject
             //loop through entire array
             for (int i = 0; i < _count; i++)
             {
-            //conditional statement inside loop
-                if(_items[i].Equals(item)) // the item we are on to `item`
+                //conditional statement inside loop
+                if (_items[i].Equals(item) && haveRemovedItem == false) // the item we are on to `item`
                 {
-                    // _items[i + 1]
-                    temporaryArray[i] = _items[i + 1];
+
+                    haveRemovedItem = true;
+                    continue;
+                }
+                else if (haveRemovedItem == true)
+                {
+                    temporaryArray[i - 1] = _items[i];
                 }
                 else
                 {
                     temporaryArray[i] = _items[i];
                 }
-            //if this is the item, what will we do? If this is not the item, what will we do?
+                //if this is the item, what will we do? If this is not the item, what will we do?
 
             }
 
             _items = temporaryArray;
-            _count--;
-        }
+            if (haveRemovedItem == true)
+            {
+                _count--;
+            }
 
-        
+
+        }
     }
 }
