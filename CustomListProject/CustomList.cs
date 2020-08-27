@@ -1,5 +1,6 @@
 ﻿using System;
 using System.CodeDom.Compiler;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,14 +8,32 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable
     {
-
+        
         T[] _items;
 
         int _capacity;
         int _count;
 
+        public T this[int index]
+        {
+            get
+            {
+                if (index < 0 || index >= _count)
+                    throw new IndexOutOfRangeException("Index out of range");
+
+                return _items[index];
+            }
+
+            set
+            {
+                if (index < 0 || index >= _count)
+                    throw new IndexOutOfRangeException("Index out of range");
+
+                _items[index] = value;
+            }
+        }
         public int Count
         {
             get
@@ -98,6 +117,18 @@ namespace CustomListProject
             }
 
 
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < _count; i++)
+            {
+                yield return _items[i];
+            }
+        }
+        public override string ToString()
+        {
+            
         }
     }
 }
