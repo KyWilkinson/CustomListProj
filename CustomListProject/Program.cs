@@ -23,7 +23,7 @@ namespace CustomListProject
             customList.Remove(value3);
             //customList[0];
             Console.ReadLine();
-
+            
 
 
             //CustomList<int> test = new CustomList<int>() { 1, 2, 3 }; needs an add method and ienumerbale 
