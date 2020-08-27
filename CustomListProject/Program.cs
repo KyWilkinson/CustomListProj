@@ -11,7 +11,18 @@ namespace CustomListProject
     {
         static void Main(string[] args)
         {
-            
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 2;
+            int value2 = 4;
+            int value3 = 6;
+            int value4 = 8;
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.Add(value4);
+            customList.Remove(value3);
+            Console.WriteLine(customList);
+            Console.ReadLine();
             
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CustomListProject;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CustomListMethodTesting
 {
@@ -125,6 +126,27 @@ namespace CustomListMethodTesting
             customList.Remove(50);
             customList.Remove(80);
             actual = customList.Count;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Display_Array_Index()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+            int value1 = 2;
+            int value2 = 4;
+            int value3 = 6;
+            int value4 = 8;
+            customList.Add(value1);
+            customList.Add(value2);
+            customList.Add(value3);
+            customList.Add(value4);
+            int expected = 8;
+            int actual;
+            //Act
+            customList.Remove(value3);
+            actual = customList[2];
             //Assert
             Assert.AreEqual(expected, actual);
         }
