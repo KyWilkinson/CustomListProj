@@ -36,7 +36,7 @@ namespace CustomListMethodTesting
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>();
-            string expected = " ";
+            string expected = "";
             string actual;
             //Act
             actual = customList.ToString();
